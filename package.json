@@ -1,0 +1,14 @@
+{
+  "name": "lambda-postgres",
+  "version": "1.0.0",
+  "description": "AWS Lambda test for postgres",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mauricio Romero",
+  "license": "ISC",
+  "dependencies": {
+    "pg": "^8.0.2"
+  }
+}

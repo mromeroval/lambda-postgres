@@ -1,0 +1,26 @@
+service: users
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: us-west-2
+  memorySize: 128
+  timeout: 15
+  stage: dev
+  apiName: PostgresApi-${self:provider.stage}
+
+functions:
+  getUsers:
+    handler: handler.getUsers
+    events:
+      - http:
+          path: users
+          method: get
+          cors: true
+  getUser:
+    handler: handler.getUser
+    events:
+      - http:
+          path: users/{id}
+          method: get
+          cors: true
